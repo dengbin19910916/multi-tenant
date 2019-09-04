@@ -41,6 +41,7 @@ public class HelloController {
 
     @RequestMapping("select")
     public Result getStudent(@Param("t") String t) {
+        ConstId.Id = t;
         return ResultGenerator.genSuccessResult(studentService.findAll());
     }
 
